@@ -7,7 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Add custom colors here if needed, but we'll use CSS variables mostly as requested
+        primary: 'var(--bg-primary)',
+        secondary: 'var(--bg-secondary)',
+        'text-main': 'var(--text-primary)',
+        'text-muted': 'var(--text-secondary)',
+        accent: 'var(--accent-primary)',
+        'accent-green': 'var(--accent-secondary)',
       },
     },
   },

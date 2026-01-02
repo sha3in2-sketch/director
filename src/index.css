@@ -1,37 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #05060a;
-  --bg-secondary: #0a0b10;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --accent-primary: #6366f1;
-  /* Indigo 500 */
-  --accent-secondary: #06b6d4;
-  /* Cyan 500 */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: 10px;
-}
-
-.light-mode {
-  --bg-primary: #f9fafb;
+  --bg-primary: #FAFAF8;
+  /* Warm Off-White */
   --bg-secondary: #ffffff;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --accent-primary: #4f46e5;
-  /* Indigo 600 */
-  --accent-secondary: #0891b2;
-  /* Cyan 600 */
-  --glass-bg: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.1);
+  /* Pure White for cards */
+  --text-primary: #1e293b;
+  /* Slate 800 */
+  --text-secondary: #475569;
+  /* Slate 600 */
+  --accent-primary: #0ea5e9;
+  /* Sky 500 */
+  --accent-secondary: #10b981;
+  /* Emerald 500 */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(226, 232, 240, 0.6);
+  --glass-blur: 8px;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -41,31 +32,37 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--glass-border);
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background: #94a3b8;
 }
 
-/* Glassmorphism Utilities */
+/* Utilities */
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.neon-text {
-  text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-secondary);
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.neon-border:hover {
-  box-shadow: 0 0 10px var(--accent-primary), inset 0 0 5px var(--accent-secondary);
-  border-color: var(--accent-secondary);
+/* Thermal Vision Effect */
+.thermal-hover {
+  transition: filter 0.3s ease;
+}
+
+.thermal-hover:hover {
+  filter: url(#thermal-map);
 }
