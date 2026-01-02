@@ -39,15 +39,15 @@ const Navbar = () => {
                 : 'bg-white/50 backdrop-blur-sm border-transparent py-4'
                 }`}
         >
-            <div className="mx-6 md:mx-10 flex items-center h-12">
+            <div className="mx-6 md:mx-10 flex items-center h-12 justify-between md:justify-start w-full md:w-auto">
                 {/* Logo & Identity Container - Left Aligned */}
-                <div className="flex items-center gap-6 mr-24 shrink-0">
-                    {/* Real Logo - Removed circle, increased size */}
-                    <div className="w-16 h-16 flex items-center justify-center">
+                <div className="flex items-center gap-3 md:gap-6 mr-0 md:mr-24 shrink-0">
+                    {/* Real Logo - Scaled for mobile */}
+                    <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
                         <img src="/assets/logo_new.png" alt="ECSR Lab Logo" className="w-full h-full object-contain" />
                     </div>
 
-                    <NavLink to="/" className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight whitespace-nowrap">
+                    <NavLink to="/" className="text-xl md:text-3xl font-bold text-slate-800 tracking-tight whitespace-nowrap">
                         ECSR <span className="text-accent">Lab</span>
                     </NavLink>
                 </div>

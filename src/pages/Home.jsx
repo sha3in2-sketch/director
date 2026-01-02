@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <div className="min-h-screen relative">
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden group">
+            <section className="relative min-h-[90vh] md:h-screen flex items-center justify-center overflow-hidden group py-20 md:py-0">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={energyWave}
@@ -41,29 +41,29 @@ const Home = () => {
 
                 <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
                     <FadeIn delay={0.2}>
-                        <img src={iitjLogo} alt="IIT Jodhpur" className="h-20 mb-4 inline-block drop-shadow-sm" />
-                        <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight drop-shadow-sm">
+                        <img src={iitjLogo} alt="IIT Jodhpur" className="h-16 md:h-20 mb-4 inline-block drop-shadow-sm" />
+                        <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight drop-shadow-sm">
                             Energy Conversion & <span className="text-gradient">Storage Research</span> Laboratory
                         </h1>
                     </FadeIn>
 
                     <FadeIn delay={0.4}>
-                        <p className="text-xl text-slate-700 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-700 font-medium mb-10 max-w-2xl mx-auto leading-relaxed">
                             Advancing sustainable energy conversion, storage, and thermal systems through rigorous interdisciplinary research.
                         </p>
                     </FadeIn>
 
                     <FadeIn delay={0.6}>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 md:px-0">
                             <AnimatedButton
                                 onClick={() => navigate('/research')}
-                                className="bg-sky-500 hover:bg-sky-600 text-white font-semibold shadow-lg shadow-sky-500/30 px-8 py-3"
+                                className="bg-sky-500 hover:bg-sky-600 text-white font-semibold shadow-lg shadow-sky-500/30 px-8 py-3 w-full sm:w-auto"
                             >
                                 Explore Research
                             </AnimatedButton>
                             <AnimatedButton
                                 onClick={() => navigate('/publications')}
-                                className="bg-sky-500 hover:bg-sky-600 text-white font-semibold shadow-lg shadow-sky-500/30 px-8 py-3"
+                                className="bg-sky-500 hover:bg-sky-600 text-white font-semibold shadow-lg shadow-sky-500/30 px-8 py-3 w-full sm:w-auto"
                             >
                                 View Publications
                             </AnimatedButton>
@@ -73,11 +73,11 @@ const Home = () => {
             </section>
 
             {/* Intro Section */}
-            <section className="py-24 relative">
+            <section className="py-12 md:py-24 relative">
                 <div className="container mx-auto px-6">
-                    <RevealOnScroll className="max-w-4xl mx-auto text-center mb-20">
-                        <h2 className="text-3xl font-bold text-slate-800 mb-6">Pioneering Sustainable Solutions</h2>
-                        <div className="text-lg text-slate-600 leading-relaxed text-justify mb-10 space-y-6">
+                    <RevealOnScroll className="max-w-4xl mx-auto text-center mb-12 md:mb-20">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Pioneering Sustainable Solutions</h2>
+                        <div className="text-base md:text-lg text-slate-600 leading-relaxed text-justify mb-8 md:mb-10 space-y-6">
                             <p>
                                 Energy conversion and storage technologies play a key role in the sustainable use of energy. At the Energy Conversion and Storage Research (ECSR) Lab, we design and develop thermal energy systems for efficient utilization of energy sources, their conversion, and storage, with particular reference to renewables. Our research aims to improve understanding of energy transport phenomena in thermal-fluid systems, hydraulic performance, improved process design, reduced energy consumption, and increased reliability, using both experimental and computational techniques. ECSR strongly emphasizes collaborative research with industry and institutions. Currently, we are collaborating with DRDO, IT Versum, KIT Germany, Space Research Institute Austria, Aalborg University Denmark, and Institute of Earth Physics and Space Science Hungary on various topics of global significance.
                             </p>
@@ -101,7 +101,7 @@ const Home = () => {
                     </RevealOnScroll>
 
                     {/* Research Highlights */}
-                    <StaggeredFade className="grid md:grid-cols-3 gap-8">
+                    <StaggeredFade className="grid md:grid-cols-3 gap-6 md:gap-8">
                         <SoftHoverCard
                             icon={Zap}
                             title="Energy Conversion"
